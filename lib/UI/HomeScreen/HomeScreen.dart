@@ -3,6 +3,7 @@ import 'package:accucia_task/UI/HomeScreen/BottomNavBar.dart';
 import 'package:accucia_task/UI/tabs/Ranked.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -28,6 +29,13 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        appBar: AppBar(
+          title: Text(
+            "Accucia Shop",
+            style: GoogleFonts.poppins(
+                color: Colors.white, fontWeight: FontWeight.bold, fontSize: 16),
+          ),
+        ),
         bottomNavigationBar: Bottomtabs(
           selectedTab: _selectedTab,
           tabPressed: (num) {

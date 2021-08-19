@@ -29,13 +29,6 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          "Accucia Shop",
-          style: GoogleFonts.poppins(
-              color: Colors.white, fontWeight: FontWeight.bold, fontSize: 16),
-        ),
-      ),
       body: Container(
         child: FutureBuilder<Model>(
           future: _model,

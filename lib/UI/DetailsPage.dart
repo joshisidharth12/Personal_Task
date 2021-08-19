@@ -38,7 +38,7 @@ class DetailedProds extends StatelessWidget {
               Expanded(
                   child: Container(
                 width: double.infinity,
-                padding: EdgeInsets.all(20),
+                padding: EdgeInsets.symmetric(vertical: 20),
                 decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.only(
@@ -47,18 +47,21 @@ class DetailedProds extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      "Varients",
-                      style: GoogleFonts.poppins(
-                          color: Colors.black,
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold),
+                    Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 20),
+                      child: Text(
+                        "Varients",
+                        style: GoogleFonts.poppins(
+                            color: Colors.black,
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold),
+                      ),
                     ),
                     SizedBox(
                       height: 10,
                     ),
                     Container(
-                      height: 50,
+                      height: 100,
                       width: double.infinity,
                       child: ListView.builder(
                           itemCount: varients.length,
@@ -83,18 +86,22 @@ class DetailedProds extends StatelessWidget {
                     SizedBox(
                       height: 20,
                     ),
-                    Text(
-                      "Tax",
-                      style: GoogleFonts.poppins(
-                          color: Colors.black,
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold),
+                    Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 20),
+                      child: Text(
+                        "Tax",
+                        style: GoogleFonts.poppins(
+                            color: Colors.black,
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold),
+                      ),
                     ),
                     SizedBox(
                       height: 10,
                     ),
                     Container(
                       width: double.infinity,
+                      padding: EdgeInsets.symmetric(horizontal: 20),
                       child: Row(
                         children: [
                           Text(
@@ -127,7 +134,7 @@ class VarientTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        margin: EdgeInsets.only(right: 10),
+        margin: EdgeInsets.all(15),
         padding: EdgeInsets.symmetric(horizontal: 20),
         decoration: BoxDecoration(
             color: colors,
@@ -140,7 +147,7 @@ class VarientTile extends StatelessWidget {
             borderRadius: BorderRadius.circular(10)),
         child: Center(
             child: Text(
-          text,
+          "₹ "+text,
           style: GoogleFonts.poppins(
               color: colors == Colors.white ? Colors.black : Colors.white
               ),

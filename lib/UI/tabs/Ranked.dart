@@ -23,13 +23,6 @@ class _RankedListState extends State<RankedList> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          "Accucia Shop",
-          style: GoogleFonts.poppins(
-              color: Colors.white, fontWeight: FontWeight.bold, fontSize: 16),
-        ),
-      ),
       body: Container(
         child: FutureBuilder<Model>(
           future: _model,
@@ -38,9 +31,32 @@ class _RankedListState extends State<RankedList> {
               return ListView.builder(
                   itemCount: snapshot.data.rankings.length,
                   itemBuilder: (context, index) {
+
+
                     var ranked = snapshot.data.rankings[index];
                     var products = ranked.products;
                     var prodLength = ranked.products;
+                   /* List<int> MostViewed;
+                    for(int i=0 ; i<prodLength.length;i++){
+                      MostViewed.add(ranked.ranking.toString() ==
+                          "Most Viewed Products"
+                          ? products[index]
+                          .viewCount
+                          : ranked.ranking.toString() ==
+                          "Most OrdeRed Products"
+                          ? products[index]
+                          .orderCount
+
+                          : ranked.ranking
+                          .toString() ==
+                          "Most ShaRed Products"
+                          ? products[index]
+                          .shares
+                          : 0,);
+                    }*/
+
+                    //print(MostViewed);
+
                     print(prodLength.length);
                     return Container(
                       child: Column(
