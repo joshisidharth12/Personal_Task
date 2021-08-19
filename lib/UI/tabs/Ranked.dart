@@ -24,6 +24,7 @@ class _RankedListState extends State<RankedList> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
+        padding: EdgeInsets.only(top: 15),
         child: FutureBuilder<Model>(
           future: _model,
           builder: (context, snapshot) {
