@@ -78,7 +78,11 @@ class DetailedProds extends StatelessWidget {
                                           : varients[index].color.toString() ==
                                                   "White"
                                               ? Colors.white
-                                              : Colors.grey,
+                                              : varients[index].color.toString() ==
+                                  "Yellow"
+                                  ? Colors.yellow: varients[index].color.toString() ==
+                                  "Green"
+                                  ? Colors.green : Colors.grey,
                               text: varients[index].price.toString(),
                             );
                           }),
@@ -149,7 +153,7 @@ class VarientTile extends StatelessWidget {
             child: Text(
           "₹ "+text,
           style: GoogleFonts.poppins(
-              color: colors == Colors.white ? Colors.black : Colors.white
+              color: colors == Colors.white || colors == Colors.yellow ? Colors.black : Colors.white
               ),
         )));
   }
